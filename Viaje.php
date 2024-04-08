@@ -2,11 +2,13 @@
 
 class Viaje{
 
+    //inicializacion de atributos
     private $codigo;
     private $destino;
     private $cantMAx;
     private $objPasajero;
 
+    //construccion objetos
     public function __construct($codigoC,$destinoC,$cantMaxC,$objPasajeroC){
     
         $this->codigo = $codigoC;
@@ -16,6 +18,7 @@ class Viaje{
 
     }
 
+    //metodos de acceso (get)
     public function getCodigo(){
     return $this->codigo ;
     }
@@ -28,6 +31,7 @@ class Viaje{
     public function getObjPersona(){
         return $this->objPasajero ;
       }
+    //metodos acceso (set)  
     public function setCodigo($codigoSet){
         $this->codigo =$codigoSet ;
     }
@@ -40,7 +44,8 @@ class Viaje{
     public function setObjPasjeros($objPasajeroS){
         $this->objPasajero = $objPasajeroS ;
       }
-            
+    
+    //metodo tostring, para retornar informacion de los atributos  
     public function __toString()
     {
         return 
@@ -54,10 +59,12 @@ class Viaje{
 
 class Pasajero{
 
+    //inicializacion de atributos
     private $nombre;
     private $apellido;
     private $numeroDocumento;
 
+    //construccion objetos
     public function __construct($nombreC,$apellidoC,$numeroDocumentoC){
     
         $this->nombre = $nombreC;
@@ -67,6 +74,7 @@ class Pasajero{
 
     }
 
+    //metodos de acceso (get)
     public function getNombre(){
     return $this->nombre ;
     }
@@ -76,6 +84,8 @@ class Pasajero{
     public function getNroDoc(){
     return $this->numeroDocumento ;
      }
+
+    //metodos acceso (set)
     public function setNombre($codigoSet){
         $this->nombre =$codigoSet ;
     }
@@ -86,6 +96,7 @@ class Pasajero{
         $this->numeroDocumento =$cantMaxS ;
     }
             
+    //metodo tostring, para retornar informacion de los atributos  
     public function __toString()
     {
         return 
@@ -97,11 +108,13 @@ class Pasajero{
 }
 class ResponsableV{
 
+    //inicializacion de atributos
     private $nroEmpleado;
     private $nroLic;
     private $nombrer;
     private $apellidor;
 
+    //construccion objetos
     public function __construct($nroEmpleadoC,$nroLicC,$nombreC,$apellidoC){
     
         $this->nroEmpleado = $nroEmpleadoC;
@@ -111,6 +124,7 @@ class ResponsableV{
 
     }
 
+    //metodos de acceso (get)
     public function getnroEmpleado(){
     return $this->nroEmpleado ;
     }
@@ -123,6 +137,8 @@ class ResponsableV{
     public function getApellidoR(){
         return $this->apellidor ;
       }
+
+    //metodos acceso (set)  
     public function setnroEmpleado($nroEmpleadoSet){
         $this->nroEmpleado =$nroEmpleadoSet ;
     }
@@ -136,6 +152,7 @@ class ResponsableV{
         $this->apellidor = $apellidoS ;
       }
             
+    //metodo tostring, para retornar informacion de los atributos    
     public function __toString()
     {
         return 
@@ -144,7 +161,5 @@ class ResponsableV{
         "Nombre: ".$this->getNombreR()."\n".
         "Apellido: ".$this->getApellidoR()."\n";
     }
-
-
 
 }
